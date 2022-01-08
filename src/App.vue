@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Menu></Menu>
+    <OrcamentoOnline></OrcamentoOnline>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue';
+import OrcamentoOnline from './components/OrcamentoOnline';
 
 export default {
   name: 'App',
   components: {
-    Menu
+    Menu,
+    OrcamentoOnline
   }
 }
 </script>
