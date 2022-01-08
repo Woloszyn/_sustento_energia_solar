@@ -1,18 +1,27 @@
 <template>
-    <div id="menu">
+    <div id="home">
         <a href="">
             <img src="../assets/home/logo.png" alt="" srcset="">
         </a>
         <b-nav v-if="!menuStick" pills align="center">
-           <b-nav-item v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
+           <b-nav-item class="color_white" v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
                 {{menu.name}}
             </b-nav-item>
         </b-nav>
-        <b-nav v-else pills align="center">
-           <b-nav-item v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
-                {{menu.name}}
-            </b-nav-item>
-        </b-nav>
+        <div v-else class="menu_opcoes_stick">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid justify-content-center">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/home/logo-in-black.png" alt="" width="200" height="60" class="d-inline-block align-text-top">
+                    </a>
+                    <b-nav pills align="center">
+                        <b-nav-item v-for="menu in items_menu" class="color_black" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
+                            {{menu.name}}
+                        </b-nav-item>
+                    </b-nav>
+                </div>
+            </nav>
+        </div>
     </div>
 </template>
 
@@ -60,6 +69,9 @@ export default {
             menuStick: false,
         }
     },
+    mounted() {
+        setInterval(this.changeMenuType, 200);
+    },
     methods: {
         changeActive(menu) {
             this.items_menu.forEach((item) => {
@@ -69,20 +81,35 @@ export default {
                     item.active = false;
                 }
             });
+        },
+        changeMenuType() {
+            if(document.scrollingElement.scrollTop >= 231) {
+                this.menuStick = true;
+            } else {
+                this.menuStick = false;
+            }
         }
     }
 }
 </script>
 
 <style>
-    #menu{
+    #home{
         background-image: url("../assets/home/banner-2.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         min-height: 100vh;
     }
-    .nav-link {
-        color: white !important;
+    .menu_opcoes_stick{
+        position: sticky;
+        top: 0;
+        background-color: white;
+    }
+    .color_white > a {
+        color: white;
+    }
+    .color_black > a {
+        color: black;
     }
     .nav-link:hover {
         background: linear-gradient(90deg, rgba(54,127,70,0) 0%,
@@ -95,6 +122,7 @@ export default {
                                      rgba(54,127,70,0) 100%) !important;
     }
     .active {
+        color: white !important;
         background: linear-gradient(90deg, rgba(54,127,70,0) 0%,
                                      rgba(54,127,70,0.75) 10%,
                                      rgba(54,127,70,0.95) 15%,
