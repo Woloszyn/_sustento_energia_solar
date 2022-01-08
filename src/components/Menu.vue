@@ -101,8 +101,9 @@ export default {
         min-height: 100vh;
     }
     .menu_opcoes_stick{
-        position: sticky;
+        position: fixed;
         top: 0;
+        width: 100%;
         background-color: white;
     }
     .color_white > a {
