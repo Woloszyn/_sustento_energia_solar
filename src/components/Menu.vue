@@ -3,7 +3,12 @@
         <a href="">
             <img src="../assets/home/logo.png" alt="" srcset="">
         </a>
-        <b-nav pills align="center">
+        <b-nav v-if="!menuStick" pills align="center">
+           <b-nav-item v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
+                {{menu.name}}
+            </b-nav-item>
+        </b-nav>
+        <b-nav v-else pills align="center">
            <b-nav-item v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
                 {{menu.name}}
             </b-nav-item>
@@ -51,11 +56,9 @@ export default {
                     "link": "#contatos",
                     "active": false
                 },
-            ]
+            ],
+            menuStick: false,
         }
-    },
-    computed: {
-        
     },
     methods: {
         changeActive(menu) {
@@ -75,7 +78,8 @@ export default {
     #menu{
         background-image: url("../assets/home/banner-2.jpg");
         background-size: 100%;
-        min-height: 800px;
+        background-repeat: no-repeat;
+        min-height: 100vh;
     }
     .nav-link {
         color: white !important;

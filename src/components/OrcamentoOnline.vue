@@ -51,7 +51,9 @@ export default {
 
     .orcamento{
         background-image: url('../assets/orcamento/bg-orcamento.jpg') ;
-        background-size: 100%;
+        background-position-x: -50px;
+        background-size: 120%;
+        background-origin: border-box;
         min-height: 400px;
         background-repeat: no-repeat;
     }
