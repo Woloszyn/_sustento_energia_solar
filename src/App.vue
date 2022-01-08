@@ -4,6 +4,7 @@
     <OrcamentoOnline></OrcamentoOnline>
     <ComoFunciona></ComoFunciona>
     <ProdutosParceiros></ProdutosParceiros>
+    <Contatos></Contatos>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Menu from './components/Menu.vue';
 import OrcamentoOnline from './components/OrcamentoOnline';
 import ComoFunciona from './components/ComoFunciona';
 import ProdutosParceiros from  './components/ProdutosParceiros';
+import Contatos from './components/Contatos';
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     Menu,
     OrcamentoOnline,
     ComoFunciona,
-    ProdutosParceiros
+    ProdutosParceiros,
+    Contatos
   }
 }
 </script>
