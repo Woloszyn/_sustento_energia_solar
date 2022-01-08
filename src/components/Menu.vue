@@ -1,13 +1,16 @@
 <template>
     <div id="home">
-        <a href="">
-            <img src="../assets/home/logo.png" alt="" srcset="">
-        </a>
-        <b-nav v-if="!menuStick" pills align="center">
-           <b-nav-item class="color_white" v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
-                {{menu.name}}
-            </b-nav-item>
-        </b-nav>
+        <div v-if="!menuStick" class="col-12 menu_principal_info">
+            <a href="">
+                <img src="../assets/home/logo.png" alt="" srcset="">
+            </a>
+            <hr class="sem_background">
+            <b-nav pills align="center">
+                <b-nav-item class="color_white" v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
+                    {{menu.name}}
+                </b-nav-item>
+            </b-nav>
+        </div>
         <div v-else class="menu_opcoes_stick">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid justify-content-center">
@@ -100,6 +103,13 @@ export default {
         background-repeat: no-repeat;
         min-height: 100vh;
     }
+    .menu_principal_info{
+        padding-top: 35px;
+        background: linear-gradient(rgba(0, 0, 0, 0.836), transparent) ;
+    }
+    .sem_background{
+        background-color: transparent;
+    }
     .menu_opcoes_stick{
         position: fixed;
         top: 0;
@@ -108,6 +118,9 @@ export default {
     }
     .color_white > a {
         color: white;
+    }
+    a:hover {
+        color: white !important;
     }
     .color_black > a {
         color: black;
