@@ -2,18 +2,21 @@
   <div id="app" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <Menu></Menu>
     <OrcamentoOnline></OrcamentoOnline>
+    <ComoFunciona></ComoFunciona>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue';
 import OrcamentoOnline from './components/OrcamentoOnline';
+import ComoFunciona from './components/ComoFunciona'
 
 export default {
   name: 'App',
   components: {
     Menu,
-    OrcamentoOnline
+    OrcamentoOnline,
+    ComoFunciona
   }
 }
 </script>
