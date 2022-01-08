@@ -25,7 +25,15 @@ export default {
 </script>
 
 <style>
-body { overflow-x: hidden; }
+body { 
+  overflow-x: hidden;
+}
+*::-webkit-scrollbar{
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+  background: green;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
