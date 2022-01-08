@@ -3,20 +3,23 @@
     <Menu></Menu>
     <OrcamentoOnline></OrcamentoOnline>
     <ComoFunciona></ComoFunciona>
+    <ProdutosParceiros></ProdutosParceiros>
   </div>
 </template>
 
 <script>
 import Menu from './components/Menu.vue';
 import OrcamentoOnline from './components/OrcamentoOnline';
-import ComoFunciona from './components/ComoFunciona'
+import ComoFunciona from './components/ComoFunciona';
+import ProdutosParceiros from  './components/ProdutosParceiros';
 
 export default {
   name: 'App',
   components: {
     Menu,
     OrcamentoOnline,
-    ComoFunciona
+    ComoFunciona,
+    ProdutosParceiros
   }
 }
 </script>

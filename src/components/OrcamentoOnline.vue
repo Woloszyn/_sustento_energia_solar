@@ -70,6 +70,7 @@ export default {
     .module-text {
         font-size: 16px;
         font-style: italic;
+        text-align: left;
     }
     .form-control {
         font-size: 15px;
