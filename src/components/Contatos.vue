@@ -107,24 +107,25 @@ export default {
     .contato_bg {
         background-image: url('../assets/contatos/bg-contatos.jpg') ;
         background-position-x: -250px;
-        background-size: 150%;
+        background-position-x: center;
+        background-size: cover;
         background-origin: border-box;
         margin-top: 10px;
-        min-height: 700px;
+        min-height: 400px;
         background-repeat: no-repeat;
         padding-top: 40px;
         padding-bottom: 50px;
     }
     .redeSociais_bg {
         background-image: url('../assets/contatos/bg-footer.jpg') ;
-        background-position-x: -200px;
-        background-size: 150%;
+        background-size: cover;
+        background-position-y: center;
         background-origin: border-box;
-        min-height: 400px;
+        min-height: 250px;
         background-repeat: no-repeat;
     }
     .mapa {
-        height: 200px;
+        height: 230px;
         border: #4ea103 2px solid;
     }
     .paddingZero {
