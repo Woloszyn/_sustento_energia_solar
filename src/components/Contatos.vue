@@ -230,7 +230,7 @@ export default {
     .iconeLocalizacao {
         border: #4ea103 2px solid;
         color: #4ea103;
-        border-radius: 35px;
+        border-radius: 30px;
         padding: 10px;
     }
     .fa-whatsapp {
