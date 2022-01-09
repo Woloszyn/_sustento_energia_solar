@@ -22,12 +22,13 @@ export default {
     OrcamentoOnline,
     ComoFunciona,
     ProdutosParceiros,
-    Contatos
+    Contatos,
   }
 }
 </script>
 
-<style>
+,
+    Rodape<style>
 body { 
   overflow-x: hidden;
 }

@@ -7,30 +7,26 @@
                 </div>
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-4">
-                            <div class="sustentaSaoCarlos">
-                                <i class="fas fa-map-marker-alt iconeLocalizacao"></i> Sustento Energia - São Carlos
+                        <div class="col-6">
+                            <div class="endereco posicaoEndereco">
+                                <i class="fas fa-map-marker-alt icones bordaIcones"></i> Sustento Energia - São Carlos
                             </div>
-                            <div class="estiloRuaAquidaban">
-                                Rua Aquidaban, 1 Centro, São Carlos/SP
+                            <div class="ruaCep posicaoRuaCep">
+                                Rua Aquidaban, 1 Centro, São Carlos/SP <br> - CEP 13.560-120
                             </div>
-                            <div class="estiloRuaCep">- CEP 13.560-120</div>
                         </div>
-                        <div class="col-4 whatsApp">
-                            <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp"></i> (17) 98190-7484</a>
+                        <div class="col-1 whatsApp whatsAppPosicao">
+                            <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones"></i> (17) 98190-7484</a>
                         </div>
-                        <div class="col-4 email"><i class="fas fa-envelope"></i> contato@sustentoenergiasolar.com.br</div>
+                        <div class="col-3 email"><i class="fas fa-envelope icones bordaIcones"></i> contato@sustentoenergiasolar.com.br</div>
                     </div>
                     <div class="row">
-                        <div class="col-5">
-                            <div class="sustentaCatanduva">
-                                <i class="fas fa-map-marker-alt iconeLocalizacao"></i> Sustento Energia - Catanduva
+                        <div class="col-6">
+                            <div class="endereco posicaoEndereco">
+                                <i class="fas fa-map-marker-alt icones bordaIcones"></i> Sustento Energia - Catanduva
                             </div>
-                            <div class="estiloRuaCep">
-                                Rua Ribeirão Preto, 411 Vila Rodrigues, Catanduva/SP
-                            </div>
-                            <div class="estiloRuaCep">
-                                - CEP 15.801-340
+                            <div class="ruaCep posicaoRuaCep">
+                                Rua Ribeirão Preto, 411 <br> Vila Rodrigues, Catanduva/SP <br> - CEP 15.801-340
                             </div>
                         </div>
                     </div>
@@ -51,20 +47,20 @@
             <div class="row redeSociais_bg">
                 <div class="row">
                     <div class="col-4">
-                        <img src="../assets/contatos/logo-sustento.png" alt="">
+                        <img src="../assets/contatos/logo-sustento.png" class="imagemSustento">
                     </div>
                     <div class="col-4">
-                        <div class="sustentaSaoCarlosFinal">
+                        <div class="enderecoRodape">
                             Sustento Energia - São Carlos
                         </div>
-                        <div class="estiloRuaAquidaban">
+                        <div class="ruaCepRodape">
                             Rua Aquidaban, 1 Centro - São Carlos/SP 
                         </div>
-                        <div class="sustentaSaoCarlosFinal">
+                        <div class="enderecoRodape">
                             Sustento Energia - Catanduva
                         </div>
-                        <div class="estiloRuaRibeirao">
-                            Rua Ribeirão Preto, 411 Vila Rodrigues - Catanduva/SP 
+                        <div class="ruaCepRodape">
+                            Rua Ribeirão Preto, 411 Vila Rodrigues - Catanduva/SP
                         </div>
                         <div class="whatsApp">
                             <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp">
@@ -79,16 +75,28 @@
                         <div class="tituloRedeSociais">
                             Siga nossas Redes Sociais:
                         </div>
-                        <div class="redesSociais">
-                            <a href="http://www.facebook.com/sustentoenergiasolar" target="_blank" title="Facebook"  class="Facebook">
-                                <i class="fab fa-fw fa-facebook-f"></i>
-                            </a>
-                            <a href="http://www.instagram.com/sustentoenergiasolar/" target="_blank" title="Instagram" class="Instagram">
-                                <i class="fab fa-fw fa-instagram"></i>
-                            </a>
-                            <a href="http://www.linkedin.com/company/sustento-energia-solar" target="_blank" title="Linked In" class="Linkedin">
-                                <i class="fab fa-fw fa-linkedin-in"></i>
-                            </a> 
+                        <div class="linha_flex">
+                            <div class="coluna-flex">
+                                <div class="circuloRedeSocial">
+                                    <a href="http://www.facebook.com/sustentoenergiasolar" target="_blank" title="Facebook"  class="Facebook">
+                                        <i class="fab fa-fw fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="coluna-flex">
+                                <div class="circuloRedeSocial">
+                                    <a href="http://www.instagram.com/sustentoenergiasolar/" target="_blank" title="Instagram" class="Instagram">
+                                        <i class="fab fa-fw fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="coluna-flex">
+                                <div class="circuloRedeSocial">
+                                    <a href="http://www.linkedin.com/company/sustento-energia-solar" target="_blank" title="Linked In" class="Linkedin">
+                                        <i class="fab fa-fw fa-linkedin-in"></i>
+                                    </a> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -143,47 +151,44 @@ export default {
         font-style: italic;
         text-transform: uppercase;
     }
-    .sustentaSaoCarlos {
+    .endereco {
         background-position: left 10px;
-        padding-left: 50px;
         min-height: 48px;
-        padding-top: 25px;
         font-size: 15px;
         color: #fff;
         font-style: italic;
         font-weight: lighter;
         text-align: left;
         font-weight: 600;
+        margin-left: 200px;
     }
-    .sustentaSaoCarlosFinal {
+    .posicaoEndereco {
+        margin-left: 320px;
+    }
+    .enderecoRodape {
         background-position: left 10px;
         min-height: 48px;
-        padding-top: 25px;
         font-size: 15px;
         color: #fff;
         font-style: italic;
         font-weight: lighter;
+        text-align: left;
         font-weight: 600;
+        margin-left: 200px;
     }
-    .estiloRuaAquidaban {
+    .ruaCep {
         background-position: left 10px;
-        padding-left: 80px;
+        padding-left: 90px;
         font-size: 15px;
         color: #fff;
         font-style: italic;
         font-weight: lighter;
         text-align: left;
     }
-    .estiloRuaRibeirao {
-        background-position: left 10px;
-        padding-left: 60px;
-        font-size: 15px;
-        color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
+    .posicaoRuaCep {
+        margin-left: 260px;
     }
-    .estiloRuaCep {
+    .ruaCepRodape {
         background-position: left 10px;
         padding-left: 90px;
         font-size: 15px;
@@ -210,38 +215,14 @@ export default {
         font-style: italic;
         font-weight: lighter;
     }
+    .whatsAppPosicao {
+        
+    }
     .email {
         color: #fff;
         font-style: italic;
         font-weight: lighter;
-    }
-    .sustentaCatanduva {
-        background-position: left 10px;
-        padding-left: 50px;
-        min-height: 48px;
-        padding-top: 12px;
-        font-size: 15px;
-        color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
-        font-weight: 600;
-    }
-    .iconeLocalizacao {
-        border: #4ea103 2px solid;
-        color: #4ea103;
-        border-radius: 30px;
-        padding: 10px;
-    }
-    .fa-whatsapp {
-        color: #4ea103;
-        font-size: 1.8em;
-    }
-    .fa-envelope {
-        border: #4ea103 2px solid;
-        color: #4ea103;
-        border-radius: 30px;
-        padding: 10px;
+        margin-left: 30px;
     }
     .tituloRedeSociais {
         background-position: left 10px;
@@ -251,36 +232,40 @@ export default {
         font-style: italic;
         font-weight: lighter;
         text-align: left;
+        margin-top: 80px;
     }
-    .Facebook:hover {
+    .circuloRedeSocial:hover {
         color: #fff;
         background-color: #4ea103;
     }
-    .Facebook {
+    .circuloRedeSocial > a {
         color: #000;
+    }
+    .circuloRedeSocial {
         background-color: #fff;
-        border-radius: 30px;
-        padding: 5px;
-        margin-right: 80px;
+        border-radius: 80%;
+        max-width: 100%;
     }
-    .Instagram:hover {
-        color: #fff;
-        background-color: #4ea103;
+    .linha_flex {
+        width: 20%;
+        display: flex;
+        margin-left: 30%;
+        flex-direction: row;
     }
-    .Instagram {
-        color: #000;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 5px;
+    .coluna-flex {
+        width: 100%;
+        margin-left: 5px;
     }
-    .Linkedin:hover {
-        color: #fff;
-        background-color: #4ea103;
+    .imagemSustento {
+        margin-top: 80px;
     }
-    .Linkedin {
-        color: #000;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 5px;
+    .icones {
+        color: #4ea103;
+        font-size: 1.5em;
+    }
+    .bordaIcones{
+        border: #4ea103 2px solid;
+        border-radius: 50%;
+        padding: 4px;
     }
 </style>
