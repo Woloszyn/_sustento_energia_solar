@@ -112,6 +112,7 @@ export default {
     }
     .menu_opcoes_stick{
         position: fixed;
+        z-index: 999999;
         top: 0;
         width: 100%;
         background-color: white;
