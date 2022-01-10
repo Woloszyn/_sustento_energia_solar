@@ -6,28 +6,32 @@
                     <div class="tituloContato">Contato</div>
                 </div>
                 <div class="col-12">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="endereco posicaoEndereco">
-                                <i class="fas fa-map-marker-alt icones bordaIcones"></i> Sustento Energia - São Carlos
-                            </div>
-                            <div class="ruaCep posicaoRuaCep">
-                                Rua Aquidaban, 1 Centro, São Carlos/SP <br> - CEP 13.560-120
-                            </div>
+                    <div class="row estiloEnderecos">
+                        <div class="col-2"></div>
+                        <div class="col-3"> 
+                            <address class="enderecos_address">
+                                <span class="titulo_endereco">
+                                    <b>Sustento Energia - São Carlos</b>
+                                </span>
+                                <br>
+                                <i>Rua Aquidaban, 1 Centro, São Carlos/SP - CEP 13.560-120 </i>
+                            </address>
+                            <address class="enderecos_address">
+                                <span class="titulo_endereco">
+                                    <b>Sustento Energia - Catanduva</b>
+                                </span>
+                                <br> Rua Ribeirão Preto, 411 <br> Vila Rodrigues, Catanduva/SP <br> - CEP 15.801-340
+                            </address>
                         </div>
-                        <div class="col-1 whatsApp whatsAppPosicao">
-                            <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones"></i> (17) 98190-7484</a>
+                        <div class="col-2">
+                            <center>
+                                    <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones"></i> (17) 98190-7484</a>
+                            </center>
                         </div>
-                        <div class="col-3 email"><i class="fas fa-envelope icones bordaIcones"></i> contato@sustentoenergiasolar.com.br</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="endereco posicaoEndereco">
-                                <i class="fas fa-map-marker-alt icones bordaIcones"></i> Sustento Energia - Catanduva
-                            </div>
-                            <div class="ruaCep posicaoRuaCep">
-                                Rua Ribeirão Preto, 411 <br> Vila Rodrigues, Catanduva/SP <br> - CEP 15.801-340
-                            </div>
+                        <div class="col-3">
+                            <i class="fas fa-envelope icones bordaIcones"></i> contato@sustentoenergiasolar.com.br
+                        </div>
+                        <div class="col-2">
                         </div>
                     </div>
                 </div>
@@ -49,26 +53,34 @@
                     <div class="col-4">
                         <img src="../assets/contatos/logo-sustento.png" class="imagemSustento">
                     </div>
-                    <div class="col-4">
-                        <div class="enderecoRodape">
-                            Sustento Energia - São Carlos
+                    <div class="col-4 enderecosRodape">
+                        <div class="row">
+                            <div class="col-12">
+                                <center>
+                                    <address>
+                                        <b>Sustento Energia - São Carlos</b>
+                                        <br>
+                                        Rua Aquidaban, 1 Centro - São Carlos/SP 
+                                    </address>
+                                    <address>
+                                        <b>Sustento Energia - Catanduva</b>
+                                        <br>
+                                        Rua Ribeirão Preto, 411 Vila Rodrigues - Catanduva/SP
+                                    </address>
+                                </center>
+                            </div>
                         </div>
-                        <div class="ruaCepRodape">
-                            Rua Aquidaban, 1 Centro - São Carlos/SP 
-                        </div>
-                        <div class="enderecoRodape">
-                            Sustento Energia - Catanduva
-                        </div>
-                        <div class="ruaCepRodape">
-                            Rua Ribeirão Preto, 411 Vila Rodrigues - Catanduva/SP
-                        </div>
-                        <div class="whatsApp">
-                            <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp">
-                                Whatsapp: (17) 98190-7484
-                            </a>
-                        </div>
-                        <div class="estiloEmail">
-                            E-mail: contato@sustentoenergiasolar.com.br
+                        <div class="row row_sem_espaco_topo">
+                            <center>
+                                <div>
+                                    <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp" style=" text-decoration: underline;">
+                                        Whatsapp: (17) 98190-7484
+                                    </a>
+                                </div>
+                                <div>
+                                    E-mail: contato@sustentoenergiasolar.com.br
+                                </div>
+                            </center>
                         </div>
                     </div>
                     <div class="col-4">
@@ -151,60 +163,21 @@ export default {
         font-style: italic;
         text-transform: uppercase;
     }
-    .endereco {
-        background-position: left 10px;
+    .estiloEnderecos {
         min-height: 48px;
         font-size: 15px;
         color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
-        font-weight: 600;
-        margin-left: 200px;
     }
-    .posicaoEndereco {
-        margin-left: 320px;
-    }
-    .enderecoRodape {
+    .enderecosRodape {
         background-position: left 10px;
         min-height: 48px;
-        font-size: 15px;
+        font-size: 14px;
         color: #fff;
         font-style: italic;
         font-weight: lighter;
         text-align: left;
-        font-weight: 600;
-        margin-left: 200px;
-    }
-    .ruaCep {
-        background-position: left 10px;
-        padding-left: 90px;
-        font-size: 15px;
-        color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
-    }
-    .posicaoRuaCep {
-        margin-left: 260px;
-    }
-    .ruaCepRodape {
-        background-position: left 10px;
-        padding-left: 90px;
-        font-size: 15px;
-        color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
-    }
-    .estiloEmail {
-        background-position: left 10px;
-        padding-left: 80px;
-        font-size: 15px;
-        color: #fff;
-        font-style: italic;
-        font-weight: lighter;
-        text-align: left;
+        padding-top: 60px;
+        font-family: 'Montserrat', sans-serif;
     }
     .whatsApp:hover {
         color: #fff;
@@ -214,9 +187,6 @@ export default {
         text-decoration: none;
         font-style: italic;
         font-weight: lighter;
-    }
-    .whatsAppPosicao {
-        
     }
     .email {
         color: #fff;
@@ -241,6 +211,21 @@ export default {
     .circuloRedeSocial > a {
         color: #000;
     }
+    .enderecos_address {
+        text-align: left;
+    }
+    .enderecos_address::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        border: #4ea103 2px solid;
+        border-radius: 50%;
+        color: #4ea103;
+        font-size: 1.2em;
+        position: relative;
+        left: -75%;
+        padding: 4px;
+        content: '\f3c5';
+    }
     .circuloRedeSocial {
         background-color: #fff;
         border-radius: 80%;
@@ -258,10 +243,14 @@ export default {
     }
     .imagemSustento {
         margin-top: 80px;
+        margin-left: 150px;
     }
     .icones {
         color: #4ea103;
         font-size: 1.5em;
+    }
+    .titulo_endereco {
+        float: left;
     }
     .bordaIcones{
         border: #4ea103 2px solid;

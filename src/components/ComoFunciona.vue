@@ -1,6 +1,6 @@
 <template>
     <div id="como_funciona">
-        <div class="col-12">
+        <div class="col-12 main_container">
             <div class="row tituloComoFunciona">
                 <div class="col-7">
                     <div class="module-tittle">O SISTEMA FUNCIONA ASSIM</div>
@@ -51,5 +51,8 @@ export default {
         font-weight: 500;
         font-size: 16px;
         text-align: left;
+    }
+    .main_container {
+        padding-top: 60px;
     }
 </style>

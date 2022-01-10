@@ -101,7 +101,7 @@ export default {
         background-image: url("../assets/home/banner-2.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
-        min-height: 100vh;
+        min-height: 98vh;
     }
     .menu_principal_info{
         padding-top: 35px;
