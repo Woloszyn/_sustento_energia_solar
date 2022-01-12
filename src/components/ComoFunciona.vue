@@ -53,6 +53,6 @@ export default {
         text-align: left;
     }
     .main_container {
-        padding-top: 60px;
+        padding-top: 40px;
     }
 </style>

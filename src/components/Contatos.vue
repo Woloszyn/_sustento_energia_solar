@@ -25,7 +25,9 @@
                         </div>
                         <div class="col-2">
                             <center>
-                                    <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones"></i> (17) 98190-7484</a>
+                                    <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones" style="font-size: 30px"></i> 
+                                        (17) 98190-7484
+                                    </a>
                             </center>
                         </div>
                         <div class="col-3">
@@ -57,12 +59,12 @@
                         <div class="row">
                             <div class="col-12">
                                 <center>
-                                    <address>
+                                    <address class="addressSemMargin"> 
                                         <b>Sustento Energia - São Carlos</b>
                                         <br>
                                         Rua Aquidaban, 1 Centro - São Carlos/SP 
                                     </address>
-                                    <address>
+                                    <address class="addressSemMargin">
                                         <b>Sustento Energia - Catanduva</b>
                                         <br>
                                         Rua Ribeirão Preto, 411 Vila Rodrigues - Catanduva/SP
@@ -70,7 +72,7 @@
                                 </center>
                             </div>
                         </div>
-                        <div class="row row_sem_espaco_topo">
+                        <div class="row">
                             <center>
                                 <div>
                                     <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp" style=" text-decoration: underline;">
@@ -222,7 +224,7 @@ export default {
         color: #4ea103;
         font-size: 1.2em;
         position: relative;
-        left: -75%;
+        left: -77%;
         padding: 4px;
         content: '\f3c5';
     }
@@ -256,5 +258,8 @@ export default {
         border: #4ea103 2px solid;
         border-radius: 50%;
         padding: 4px;
+    }
+    .addressSemMargin {
+        margin: 0;
     }
 </style>

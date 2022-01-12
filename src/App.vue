@@ -3,6 +3,7 @@
     <Menu></Menu>
     <Trabalhos></Trabalhos>
     <OrcamentoOnline></OrcamentoOnline>
+    <Sobre></Sobre>
     <ComoFunciona></ComoFunciona>
     <ProdutosParceiros></ProdutosParceiros>
     <Contatos></Contatos>
@@ -11,21 +12,23 @@
 
 <script>
 import Menu from './components/Menu.vue';
-import Trabalhos from './components/Trabalhos.vue';
+import Trabalhos from './components/Trabalhos';
 import OrcamentoOnline from './components/OrcamentoOnline';
 import ComoFunciona from './components/ComoFunciona';
 import ProdutosParceiros from  './components/ProdutosParceiros';
 import Contatos from './components/Contatos';
+import Sobre from './components/Sobre';
 
 export default {
   name: 'App',
   components: {
     Menu,
     OrcamentoOnline,
+    Sobre,
     ComoFunciona,
     ProdutosParceiros,
     Contatos,
-    Trabalhos
+    Trabalhos,
   }
 }
 </script>
