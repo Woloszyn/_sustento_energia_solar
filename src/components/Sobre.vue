@@ -2,13 +2,13 @@
     <div id="sobre">
         <div class="col-12">
             <div class="row bg-sobre">
-                <div class="row titulo-sobre">
-                    <div class="col-7">
+                <div class="row bg_titulo">
+                    <div class="col-lg-7 col-md-12 col-12">
                         <div class="module-tittle">QUEM SOMOS E O QUE FAZEMOS</div>
                     </div>
                 </div>
                     <div class="col-2"></div>
-                    <div class="col-4 texto">
+                    <div class="col-md-10 col-lg-4 col-10 texto">
                         <p>Somos uma empresa focada em sustentabilidade <br> 
                             energética. Nosso diferencial é uma forte base técnica em <br> 
                             elaboração e viabilidade de projetos. Trabalhamos com <br> 
@@ -28,38 +28,36 @@
                             e aproximar as geradoras dos consumidores para evitar <br>
                             grandes perdas no transporte energético.
                         </p>
-                        <div class="row">
-                            <img src="../assets/sobre/sobre-text.png" class="tamanhoImagem">
-                        </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12">
                         <div class="row">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <img src="../assets/sobre/balao1.png">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <img src="../assets/sobre/balao2.png">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <img src="../assets/sobre/balao3.png">
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6 col-md-6 col-12">
                                     <img src="../assets/sobre/balao4.png">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <center>
-                                        <img src="../assets/sobre/balao5.png" alt="" srcset="">
-                                    </center>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-2"></div>
+                    <div class="row">
+                        <div class="col-12">
+                            <span class=" col-12 col-md-6 float-right">
+                                <center><img src="../assets/sobre/balao5.png" alt="" srcset=""></center>
+                            </span>
+                            <img src="../assets/sobre/sobre-text.png" class="tamanhoImagem">
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
@@ -74,22 +72,26 @@ export default {
 <style>
 .bg-sobre {
     background-image: url('../assets/sobre/bg-sobre.jpg') ;
-    background-position-x: -400px;
-    background-size: 150%;
+    background-position: center center;
+    background-size: cover;
     background-origin: border-box;
     min-height: 550px;
     background-repeat: no-repeat;
 }
-.titulo-sobre {
-    background-image: url('../assets/orcamento/title-orcamento-online.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    min-height: 60px;
-}
+
 .module-tittle {
-    font-size: 26px;
     font-weight: 700;
     font-style: italic;
+}
+
+@media(max-width: 820px) {
+    .float-right{
+        float: none;
+    }
+}
+
+.float-right {
+    float: right;
 }
 .texto {
     color: #000;

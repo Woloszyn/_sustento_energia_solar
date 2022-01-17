@@ -7,8 +7,8 @@
                 </div>
                 <div class="col-12">
                     <div class="row estiloEnderecos">
-                        <div class="col-2"></div>
-                        <div class="col-3"> 
+                        <div class="col-lg-2 col-2"></div>
+                        <div class="col-lg-3 col-8"> 
                             <address class="enderecos_address">
                                 <span class="titulo_endereco">
                                     <b>Sustento Energia - São Carlos</b>
@@ -23,17 +23,17 @@
                                 <br> Rua Ribeirão Preto, 411 <br> Vila Rodrigues, Catanduva/SP <br> - CEP 15.801-340
                             </address>
                         </div>
-                        <div class="col-2">
+                        <div class=" col-lg-2 col-12">
                             <center>
                                     <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones" style="font-size: 30px"></i> 
                                         (17) 98190-7484
                                     </a>
                             </center>
                         </div>
-                        <div class="col-3">
+                        <div class="col-lg-3 col-12">
                             <i class="fas fa-envelope icones bordaIcones"></i> contato@sustentoenergiasolar.com.br
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2 col-2">
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,10 @@
         <div class="col-12">
             <div class="row redeSociais_bg">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-md-12 col-12">
                         <img src="../assets/contatos/logo-sustento.png" class="imagemSustento">
                     </div>
-                    <div class="col-4 enderecosRodape">
+                    <div class="col-lg-4 col-12 enderecosRodape">
                         <div class="row">
                             <div class="col-12">
                                 <center>
@@ -85,31 +85,39 @@
                             </center>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="tituloRedeSociais">
-                            Siga nossas Redes Sociais:
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <div class="tituloRedeSociais titulo_redes_sociais_row">
+                            <b>
+                                Siga nossas Redes Sociais:
+                            </b>
                         </div>
-                        <div class="linha_flex">
-                            <div class="coluna-flex">
-                                <div class="circuloRedeSocial">
-                                    <a href="http://www.facebook.com/sustentoenergiasolar" target="_blank" title="Facebook"  class="Facebook">
-                                        <i class="fab fa-fw fa-facebook-f"></i>
-                                    </a>
-                                </div>
+                        <div class="row redes_sociais_row">
+                            <div class="col-4">
+                                <center>
+                                    <div class="circuloRedeSocial">
+                                        <a href="http://www.facebook.com/sustentoenergiasolar" target="_blank" title="Facebook"  class="Facebook">
+                                            <i class="fab fa-fw fa-facebook-f"></i>
+                                        </a>
+                                    </div>
+                                </center>
                             </div>
-                            <div class="coluna-flex">
-                                <div class="circuloRedeSocial">
-                                    <a href="http://www.instagram.com/sustentoenergiasolar/" target="_blank" title="Instagram" class="Instagram">
-                                        <i class="fab fa-fw fa-instagram"></i>
-                                    </a>
-                                </div>
+                            <div class="col-4">
+                                <center>
+                                    <div class="circuloRedeSocial">
+                                        <a href="http://www.instagram.com/sustentoenergiasolar/" target="_blank" title="Instagram" class="Instagram">
+                                            <i class="fab fa-fw fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </center>
                             </div>
-                            <div class="coluna-flex">
-                                <div class="circuloRedeSocial">
-                                    <a href="http://www.linkedin.com/company/sustento-energia-solar" target="_blank" title="Linked In" class="Linkedin">
-                                        <i class="fab fa-fw fa-linkedin-in"></i>
-                                    </a> 
-                                </div>
+                            <div class="col-4">
+                                <center>
+                                    <div class="circuloRedeSocial">
+                                        <a href="http://www.linkedin.com/company/sustento-energia-solar" target="_blank" title="Linked In" class="Linkedin">
+                                            <i class="fab fa-fw fa-linkedin-in"></i>
+                                        </a> 
+                                    </div>
+                                </center>
                             </div>
                         </div>
                     </div>
@@ -139,12 +147,24 @@ export default {
         padding-bottom: 50px;
     }
     .redeSociais_bg {
-        background-image: url('../assets/contatos/bg-footer.jpg') ;
+        background-image: url('../assets/contatos/bg-footer.jpg');
         background-size: cover;
         background-position-y: center;
         background-origin: border-box;
         min-height: 250px;
+        padding-bottom: 50px;
         background-repeat: no-repeat;
+    }
+    .redes_sociais_row {
+        max-width: 60%;
+        margin-top: 15px !important;
+        margin-left: 20% !important;
+        margin-right: 20% !important;
+    }
+    .titulo_redes_sociais_row {
+        max-width: 60%;
+        margin-left: 20% !important;
+        margin-right: 20% !important;
     }
     .mapa {
         height: 230px;
@@ -198,7 +218,6 @@ export default {
     }
     .tituloRedeSociais {
         background-position: left 10px;
-        padding-left: 90px;
         font-size: 15px;
         color: #fff;
         font-style: italic;
@@ -224,19 +243,49 @@ export default {
         color: #4ea103;
         font-size: 1.2em;
         position: relative;
-        left: -77%;
+        left: -100%;
         padding: 4px;
         content: '\f3c5';
     }
+    @media (max-width:800px) {
+        .enderecos_address::before{
+            left: -50% !important;
+        }
+    }
+
+    @media (max-width:991px) {
+        .linha_flex {
+            width: 100%;
+        }
+        .tituloRedeSociais {
+            margin-top: 0px;
+            margin-left: 30% !important;
+            margin-right: 30% !important;
+            width: 40%;
+        }
+    }
+
+    @media (max-width:700px) {
+        .enderecos_address::before{
+            display: none;
+        }
+    }
+
+    @media (max-width:980px) {
+        .enderecos_address::before{
+            left: -50% !important;
+        }
+    }
+
     .circuloRedeSocial {
         background-color: #fff;
-        border-radius: 80%;
-        max-width: 100%;
+        border-radius: 100%;
+        max-width: 40px;
+        padding: 10px;
     }
     .linha_flex {
         width: 20%;
         display: flex;
-        margin-left: 30%;
         flex-direction: row;
     }
     .coluna-flex {
@@ -245,7 +294,6 @@ export default {
     }
     .imagemSustento {
         margin-top: 80px;
-        margin-left: 150px;
     }
     .icones {
         color: #4ea103;

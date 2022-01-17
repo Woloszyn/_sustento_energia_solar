@@ -99,7 +99,8 @@ export default {
 <style>
     #home{
         background-image: url("../assets/home/banner-2.jpg");
-        background-size: 100%;
+        background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
         min-height: 98vh;
     }
