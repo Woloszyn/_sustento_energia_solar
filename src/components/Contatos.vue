@@ -243,7 +243,7 @@ export default {
         color: #4ea103;
         font-size: 1.2em;
         position: relative;
-        left: -100%;
+        left: -70%;
         padding: 4px;
         content: '\f3c5';
     }
@@ -274,6 +274,24 @@ export default {
     @media (max-width:980px) {
         .enderecos_address::before{
             left: -50% !important;
+        }
+    }
+
+    @media (max-width:1378px) {
+        .enderecos_address::before{
+            left: -80% !important;
+        }
+    }
+
+    @media (max-width:1378px) {
+        .enderecos_address::before{
+            left: -90% !important;
+        }
+    }
+
+    @media (max-width:1128px) {
+        .enderecos_address::before{
+            left: -100% !important;
         }
     }
 
