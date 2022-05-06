@@ -71,7 +71,8 @@ export default {
         .module-tittle {
             border: 3px solid green;
             border-radius: 30px;
-            margin: 15px;
+            max-width: 90% !important;
+            margin: 20px;
             font-weight: 700;
             padding: 15px;
         }

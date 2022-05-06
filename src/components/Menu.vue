@@ -1,6 +1,30 @@
 <template>
     <div id="home">
-        <div v-if="!menuStick" class="col-12 menu_principal_info">
+        <div v-if="menuMobile" class="col-12 menu_mobile">
+            <div class="col-1">
+                <transition v-if="!show_menus_mobile" name="fade">
+                    <button @click="show_menus_mobile = !show_menus_mobile" class="btn btn_mobile"> <i class="fa fa-bars"></i> </button>
+                </transition>
+                <transition v-else name="fade">
+                    <button @click="show_menus_mobile = !show_menus_mobile" class="btn btn_mobile"> <i class="fa fa-times"></i> </button>
+                </transition>
+            </div>
+            <div class="col-11">
+                <a v-if="!menuStick" href="">
+                    <img src="../assets/home/logo.png" alt="" srcset="">
+                </a>
+            </div>
+            <div class="row" v-if="show_menus_mobile">
+                <div class="col-12">
+                    <b-list-group>
+                        <b-list-group-item class="options_menu_mobile" v-for="menu in items_menu" :active="menu.active" :key="menu.name" :href='menu.link' @click="changeActive(menu)">
+                            {{menu.name}}
+                        </b-list-group-item>    
+                    </b-list-group>
+                </div>
+            </div>
+        </div>
+        <div v-else-if="!menuStick && !menuMobile" class="col-12 menu_principal_info">
             <a href="">
                 <img src="../assets/home/logo.png" alt="" srcset="">
             </a>
@@ -11,7 +35,7 @@
                 </b-nav-item>
             </b-nav>
         </div>
-        <div v-else class="menu_opcoes_stick">
+        <div v-else-if="menuStick && !menuMobile" class="menu_opcoes_stick">
             <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid justify-content-center">
                     <a class="navbar-brand" href="#">
@@ -70,6 +94,8 @@ export default {
                 },
             ],
             menuStick: false,
+            menuMobile: false,
+            show_menus_mobile: false,
         }
     },
     mounted() {
@@ -84,8 +110,14 @@ export default {
                     item.active = false;
                 }
             });
+            this.show_menus_mobile = false;
         },
         changeMenuType() {
+            if(document.scrollingElement.scrollWidth < 980) {
+                this.menuMobile = true
+            } else {
+                this.menuMobile = false
+            }
             if(document.scrollingElement.scrollTop >= 231) {
                 this.menuStick = true;
             } else {
@@ -98,15 +130,22 @@ export default {
 
 <style>
     #home{
-        background-image: url("../assets/home/banner-2.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.007)), url("../assets/home/banner-2.jpg");
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         min-height: 98vh;
     }
+    .menu_mobile {
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.527) !important;
+    }
     .menu_principal_info{
         padding-top: 35px;
-        background: linear-gradient(rgba(0, 0, 0, 0.836), transparent) ;
+        background: linear-gradient(rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.082)) ;
     }
     .sem_background{
         background-color: transparent;
@@ -118,6 +157,18 @@ export default {
         width: 100%;
         background-color: white;
     }
+    .btn_mobile {
+        color: white !important;
+        font-size: 2rem !important;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active em versões anteriores a 2.1.8 */ {
+    opacity: 0;
+    }
+
     .color_white > a {
         color: white;
     }
@@ -126,6 +177,14 @@ export default {
     }
     .color_black > a {
         color: black;
+    }
+    a.active.options_menu_mobile {
+        background: white !important;
+        background-color: rgb(3, 151, 23) !important;
+    }
+    .options_menu_mobile {
+        background-color: rgba(0, 0, 0, 0.527) !important;
+        color: white !important;
     }
     .nav-link:hover {
         background: linear-gradient(90deg, rgba(54,127,70,0) 0%,

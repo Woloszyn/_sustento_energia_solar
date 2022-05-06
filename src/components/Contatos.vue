@@ -24,14 +24,14 @@
                             </address>
                         </div>
                         <div class=" col-lg-2 col-12">
-                            <center>
-                                    <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp"><i class="fab fa-whatsapp icones" style="font-size: 30px"></i> 
-                                        (17) 98190-7484
-                                    </a>
-                            </center>
+                                <a href="https://web.whatsapp.com/send?phone=5517981907484&amp;text=Olá!" target="_blank" class="whatsApp align_sumir_icone"><i class="fab fa-whatsapp icones sumir_icone" style="font-size: 30px"></i> 
+                                    (17) 98190-7484
+                                </a>
                         </div>
                         <div class="col-lg-3 col-12">
-                            <i class="fas fa-envelope icones bordaIcones"></i> contato@sustentoenergiasolar.com.br
+                            <span class="align_sumir_icone">
+                                <i class="fas fa-envelope icones bordaIcones sumir_icone"></i> contato@sustentoenergiasolar.com.br
+                            </span>
                         </div>
                         <div class="col-lg-2 col-2">
                         </div>
@@ -247,11 +247,13 @@ export default {
         padding: 4px;
         content: '\f3c5';
     }
+
     @media (max-width:800px) {
         .enderecos_address::before{
             left: -50% !important;
         }
     }
+
 
     @media (max-width:991px) {
         .linha_flex {
@@ -268,6 +270,22 @@ export default {
     @media (max-width:700px) {
         .enderecos_address::before{
             display: none;
+        }
+    }
+
+    @media (max-width:700px) {
+        .enderecos_address::before{
+            display: none;
+        }
+    }
+    
+    @media (max-width:990px) {
+        .sumir_icone{
+            display: none;
+        }
+        .align_sumir_icone{
+            float: left;
+            margin-left: 17%;
         }
     }
 
